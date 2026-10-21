@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce a Los Tres Mosqueteros: Norbey, Juan David, Stiven Culma y Juan Pablo Tapiero.">
+  <title>Los Tres Mosqueteros | Nuestro grupo</title>
+  <style>
+    :root {
+      --navy: #101b35;
+      --blue: #2356a8;
+      --gold: #f4c95d;
+      --paper: #f4f7fb;
+      --ink: #202b3d;
+      --muted: #5d6b80;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(16, 27, 53, .96);
+      color: white;
+      box-shadow: 0 3px 16px rgba(0,0,0,.15);
+    }
+    nav {
+      max-width: 1100px; margin: auto; padding: 14px 22px;
+      display: flex; justify-content: space-between; align-items: center; gap: 18px;
+    }
+    .brand { font-weight: 800; letter-spacing: .3px; }
+    .brand span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 18px; padding: 0; margin: 0; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-size: .95rem; }
+    nav a:hover { color: var(--gold); }
+    .hero {
+      min-height: 470px; padding: 90px 22px;
+      display: grid; place-items: center; text-align: center; color: white;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(244,201,93,.20), transparent 28%),
+        linear-gradient(135deg, rgba(16,27,53,.96), rgba(35,86,168,.90));
+    }
+    .hero-inner { max-width: 800px; }
+    .eyebrow { color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+    h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.05; margin: 14px 0; }
+    .hero p { max-width: 650px; margin: 0 auto 28px; font-size: 1.12rem; color: #e5ebf6; }
+    .button {
+      display: inline-block; padding: 12px 21px; border-radius: 999px;
+      background: var(--gold); color: var(--navy); font-weight: 800; text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 8px 22px #0003; }
+    section { max-width: 1100px; margin: auto; padding: 72px 22px; }
+    .section-heading { text-align: center; margin-bottom: 34px; }
+    .section-heading h2 { margin: 0 0 8px; font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--navy); }
+    .section-heading p { color: var(--muted); margin: 0 auto; max-width: 650px; }
+    .intro {
+      max-width: 850px; margin: auto; padding: 28px;
+      border-left: 5px solid var(--gold); background: white; border-radius: 12px;
+      box-shadow: 0 8px 28px #1727440d;
+    }
+    .members { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .card {
+      background: white; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 8px 28px #17274412; border: 1px solid #e7edf5;
+    }
+    .avatar {
+      height: 125px; display: grid; place-items: center; font-size: 2.7rem; font-weight: 900;
+      color: var(--navy); background: linear-gradient(135deg, #e8effc, #fff3c9);
+    }
+    .card-content { padding: 20px; }
+    .card h3 { margin: 0 0 8px; color: var(--navy); }
+    .tag { display: inline-block; color: #214c94; background: #eaf1ff; padding: 4px 9px; border-radius: 999px; font-size: .78rem; font-weight: 750; }
+    .card p { color: var(--muted); font-size: .94rem; }
+    .places { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .place-visual {
+      min-height: 155px; display: grid; place-items: center; text-align: center;
+      padding: 18px; font-size: 3rem;
+      background: linear-gradient(135deg, #dce8f9, #f9edc9);
+    }
+    .place-visual span { font-size: .9rem; display: block; color: var(--navy); font-weight: 800; }
+    .place .card-content { padding: 20px; }
+    .place h3 { margin-top: 0; color: var(--navy); }
+    .note { font-size: .85rem; color: var(--muted); }
+    .contact {
+      text-align: center; background: var(--navy); color: white;
+      max-width: none; padding: 58px 22px;
+    }
+    .contact h2 { color: white; }
+    .contact p { color: #dbe5f6; max-width: 650px; margin: 0 auto 20px; }
+    footer { text-align: center; padding: 22px; background: #0b1328; color: #cbd5e5; font-size: .88rem; }
+    @media (max-width: 850px) {
+      .members { grid-template-columns: repeat(2, 1fr); }
+      .places { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      nav ul { gap: 12px; }
+      .members { grid-template-columns: 1fr; }
+      .hero { min-height: 420px; padding: 65px 20px; }
+      section { padding: 52px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Navegación principal">
+      <div class="brand">⚔️ <span>LOS TRES</span> MOSQUETEROS</div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#integrantes">Integrantes</a></li>
+        <li><a href="#turismo">Turismo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" style="max-width:none">
+      <div class="hero-inner">
+        <div class="eyebrow">Amistad · Respeto · Trabajo en equipo</div>
+        <h1>Los Tres<br>Mosqueteros</h1>
+        <p>Somos un grupo de estudiantes que comparte ideas, aprende junto y cree que la amistad y el compañerismo hacen la diferencia.</p>
+        <a class="button" href="#integrantes">Conoce al equipo ↓</a>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="section-heading">
+        <h2>¿Quiénes somos?</h2>
+        <p>Un equipo unido por la amistad y las ganas de aprender.</p>
+      </div>
+      <div class="intro">
+        Somos <strong>Los Tres Mosqueteros</strong>, un grupo de compañeros del colegio Gabriel García Márquez.
+        Nos gusta compartir, apoyarnos en las actividades escolares y aprender cosas nuevas. Aunque nuestro nombre
+        dice “Tres”, nuestro equipo cuenta con cuatro integrantes, y cada uno aporta su personalidad y sus ideas.
+      </div>
+    </section>
+
+    <section id="integrantes">
+      <div class="section-heading">
+        <h2>Nuestros integrantes</h2>
+        <p>Cuatro compañeros, distintas personalidades y un mismo espíritu de equipo.</p>
+      </div>
+      <div class="members">
+        <article class="card">
+          <div class="avatar" aria-hidden="true">N</div>
+          <div class="card-content">
+            <span class="tag">Integrante</span>
+            <h3>Norbey</h3>
+            <p>Soy Norbey, estudiante del colegio Gabriel García Márquez. Me gusta aprender cosas nuevas, desarrollar mis ideas y compartir con mis compañeros.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="avatar" aria-hidden="true">JD</div>
+          <div class="card-content">
+            <span class="tag">Integrante</span>
+            <h3>Juan David</h3>
+            <p>Juan David es estudiante del colegio Gabriel García Márquez y forma parte de nuestro equipo. Su participación ayuda a que aprendamos y trabajemos juntos.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="avatar" aria-hidden="true">SC</div>
+          <div class="card-content">
+            <span class="tag">Integrante</span>
+            <h3>Stiven Culma</h3>
+            <p>Stiven Culma es estudiante y compañero de nuestro grupo. Aporta sus ideas y comparte con el equipo las experiencias de la vida escolar.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="avatar" aria-hidden="true">JP</div>
+          <div class="card-content">
+            <span class="tag">Integrante</span>
+            <h3>Juan Pablo Tapiero</h3>
+            <p>Juan Pablo Tapiero es estudiante del colegio Gabriel García Márquez. Es parte de este grupo de amigos que busca aprender y apoyarse mutuamente.</p>
+          </div>
+        </article>
+      </div>
+      <p class="note" style="text-align:center;margin-top:18px">Las descripciones son una presentación inicial; podemos personalizarlas con los gustos y cualidades reales de cada integrante.</p>
+    </section>
+
+    <section id="turismo">
+      <div class="section-heading">
+        <h2>Descubre nuestra región</h2>
+        <p>Una pequeña muestra de lugares turísticos para conocer y cuidar. Esta sección está preparada para Soacha y sus alrededores; si tu municipio es otro, la adaptamos.</p>
+      </div>
+      <div class="places">
+        <article class="card place">
+          <div class="place-visual" aria-hidden="true">🏞️ <span>Naturaleza</span></div>
+          <div class="card-content">
+            <h3>Salto del Tequendama</h3>
+            <p>Una cascada reconocida por su paisaje natural y su importancia histórica en la región. Antes de visitarla, consulta las recomendaciones y los accesos autorizados.</p>
+          </div>
+        </article>
+        <article class="card place">
+          <div class="place-visual" aria-hidden="true">🪨 <span>Historia ancestral</span></div>
+          <div class="card-content">
+            <h3>Parque Arqueológico Canoas</h3>
+            <p>Un lugar de interés arqueológico asociado con el patrimonio rupestre de la zona. Es importante respetar y proteger las manifestaciones culturales.</p>
+          </div>
+        </article>
+        <article class="card place">
+          <div class="place-visual" aria-hidden="true">🏛️ <span>Cultura local</span></div>
+          <div class="card-content">
+            <h3>Parque Principal de Soacha</h3>
+            <p>Un espacio tradicional del municipio donde se puede conocer parte de la vida cotidiana, la historia local y la cultura de la comunidad.</p>
+          </div>
+        </article>
+      </div>
+      <p class="note" style="text-align:center;margin-top:18px">Las ilustraciones son símbolos decorativos, no fotografías reales de los sitios.</p>
+    </section>
+
+    <section class="contact" style="max-width:none">
+      <h2>¡La unión hace la fuerza!</h2>
+      <p>Los Tres Mosqueteros: cuatro integrantes, una amistad y muchas cosas por aprender.</p>
+      <a class="button" href="#inicio">Volver al inicio ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Los Tres Mosqueteros · Proyecto escolar</p>
+    <p>Hecho con compañerismo y creatividad.</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
