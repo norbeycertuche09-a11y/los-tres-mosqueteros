@@ -1,0 +1,20 @@
+LOS TRES MOSQUETEROS — APLICACIÓN PARA INSTALAR
+
+Archivos:
+- index.html: la aplicación y el juego.
+- manifest.json: nombre e icono de la aplicación al instalarla.
+- sw.js: permite guardar recursos para uso posterior sin conexión.
+- logo.png: logo del perrito que aparece dentro de la aplicación.
+- icon-192.png e icon-512.png: iconos del perrito para instalar la aplicación.
+- icon.svg: icono alternativo anterior.
+
+PARA PUBLICARLA EN GITHUB PAGES:
+1. En el repositorio los-tres-mosqueteros, sube estos archivos a la raíz.
+2. Asegúrate de que Pages esté configurado para la rama main y la carpeta /(root).
+3. Espera a que GitHub Pages publique el sitio.
+
+PARA INSTALAR EN EL CELULAR:
+- Android: abre el enlace publicado con Chrome; menú ⋮ > "Instalar aplicación" o "Añadir a pantalla de inicio".
+- iPhone: abre el enlace en Safari; botón Compartir > "Añadir a pantalla de inicio".
+
+Nota: para instalar como aplicación, debe abrirse desde un sitio HTTPS publicado; abrir el archivo HTML descargado no suele ofrecer la opción de instalar. La disponibilidad exacta del menú depende del navegador.
